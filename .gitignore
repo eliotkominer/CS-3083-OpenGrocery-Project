@@ -1,0 +1,38 @@
+# Node.js dependencies, builds, and test output
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+*.tsbuildinfo
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+.envrc
+.npmrc
+.pgpass
+.pg_service.conf
+pgpass.conf
+*.pem
+*.key
+
+# Local database files and generated backups
+*.dump
+*.backup
+*.sql.gz
+/backups/
+/database/backups/
+/database/pgdata/
+
+# Course reference PDFs and local workspace files
+*.pdf
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.aws/
+.codex/
