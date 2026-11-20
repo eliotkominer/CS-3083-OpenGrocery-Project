@@ -10,14 +10,12 @@ app.get("/api/health", (req, res) => {
 
 app.get("/api/health/db", async (req, res) => {
   try {
-    const result = await pool.query(
-      "SELECT COUNT(*) AS product_count FROM product;",
-    );
+    await pool.query("SELECT 1;");
 
-    res.json({ product_count: result.rows[0].product_count });
+    res.json({ status: "ok" });
   } catch (error) {
     console.error("Database query failed:", error);
-    res.status(500).json({ error: "Database unavailable" });
+    res.status(503).json({ status: "unavailable" });
   }
 });
 

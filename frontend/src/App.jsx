@@ -2,25 +2,25 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const [productCount, setProductCount] = useState(null);
+  const [dbStatus, setDbStatus] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function fetchProductCount() {
+    async function fetchDatabaseStatus() {
       try {
         const response = await fetch("/api/health/db");
 
         if (!response.ok) {
-          throw new Error("Failed to fetch products");
+          throw new Error("Database health check failed");
         }
 
         const data = await response.json();
-        setProductCount(data.product_count);
+        setDbStatus(data.status);
       } catch (error) {
         setError(error.message);
       }
     }
-    fetchProductCount();
+    fetchDatabaseStatus();
   }, []);
 
   return (
@@ -29,9 +29,9 @@ function App() {
       <p>
         {error !== null
           ? error
-          : productCount === null
-            ? "Loading..."
-            : `Products in database: ${productCount}`}
+          : dbStatus === null
+            ? "Checking database..."
+            : `Database status: ${dbStatus}`}
       </p>
     </main>
   );
