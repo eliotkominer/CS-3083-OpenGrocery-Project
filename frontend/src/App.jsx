@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router";
 import AppRoutes from "./AppRoutes.jsx";
 import "./App.css";
 
@@ -27,6 +28,10 @@ function App() {
   return (
     <main>
       <h1>OpenGrocery</h1>
+      <nav aria-label="Main" className="app-nav">
+        <NavLink to="/products">Products</NavLink>
+        <NavLink to="/lists">Shopping lists</NavLink>
+      </nav>
       <p>
         {error !== null
           ? error

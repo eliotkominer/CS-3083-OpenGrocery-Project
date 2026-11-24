@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import pool from "./db/pool.js";
 import productsRouter from "./routes/products.js";
+import listsRouter from "./routes/lists.js";
 const app = express();
 const port = Number(process.env.PORT) || 3001;
 
@@ -21,6 +22,7 @@ app.get("/api/health/db", async (req, res) => {
 });
 
 app.use("/api/products", productsRouter);
+app.use("/api/lists", listsRouter);
 
 // Mount API routes above this error handler.
 app.use("/api", (error, req, res, next) => {
