@@ -6,7 +6,6 @@
 | --- | --- |
 | [.gitignore](../.gitignore) | Excludes generated files, local credentials, backups, and course PDFs |
 | [README.md](../README.md) | Public project overview and navigation |
-| [AGENTS.md](../AGENTS.md) | Repository guidance and source conventions |
 | [database/01_create_tables.sql](../database/01_create_tables.sql) | Submitted schema with seven table definitions and constraints |
 | [database/02_insert_data.sql](../database/02_insert_data.sql) | Submitted fictional rows with explicit IDs and dated price observations |
 | [database/03_queries_and_results.sql](../database/03_queries_and_results.sql) | Submitted Q01–Q18 with descriptive comments |

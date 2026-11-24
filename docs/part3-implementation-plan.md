@@ -19,7 +19,6 @@ project-opengrocery/
   database/             original submitted Part 2 SQL (preserve)
   docs/                 project documentation and actual demo evidence
   README.md
-  AGENTS.md
   .gitignore
 ```
 

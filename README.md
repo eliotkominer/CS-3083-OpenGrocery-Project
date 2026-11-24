@@ -21,7 +21,6 @@ The planned stack is React with JavaScript, HTML, and CSS in the browser, an Exp
 | [Use cases](docs/use-cases.md)                                                | Proposed features and their connections to the Part 2 queries          |
 | [Work plan](docs/work-plan.md) and [progress report](docs/progress-report.md) | Team planning and evidence to collect for the November checkpoint      |
 | [Evaluation](docs/evaluation.md) and [file inventory](docs/file-inventory.md) | Planned checks and an index of local documents and external references |
-| [AGENTS.md](AGENTS.md)                                                        | Guidance for working in this repository                                |
 
 For a fresh PostgreSQL database, start with [the table definitions](database/01_create_tables.sql), load [the demonstration data](database/02_insert_data.sql), and then run [the example queries](database/03_queries_and_results.sql).
 
