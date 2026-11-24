@@ -1,0 +1,58 @@
+.shopping-lists {
+  max-inline-size: 58rem;
+  margin: 2rem auto;
+  padding-inline: 1rem;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+
+.shopping-lists h2 {
+  margin-block-start: 0.75rem;
+}
+
+.shopping-lists-note {
+  color: var(--text);
+}
+
+.shopping-lists dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0 0 1.25rem;
+}
+
+.shopping-lists dt {
+  font-weight: 600;
+}
+
+.shopping-lists dd {
+  margin: 0;
+}
+
+.list-table-scroll {
+  overflow-x: auto;
+}
+
+.list-table-scroll table {
+  border-collapse: collapse;
+  min-inline-size: 38rem;
+  inline-size: 100%;
+  text-align: start;
+}
+
+.list-table-scroll caption {
+  font-weight: 600;
+  text-align: start;
+}
+
+.list-table-scroll th,
+.list-table-scroll td {
+  padding: 0.5rem;
+  border-block-end: 1px solid var(--border);
+  vertical-align: top;
+  text-align: start;
+}
+
+.list-table-scroll time {
+  white-space: nowrap;
+}
