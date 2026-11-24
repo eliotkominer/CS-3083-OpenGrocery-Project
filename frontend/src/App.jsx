@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import AppRoutes from "./AppRoutes.jsx";
 import "./App.css";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             ? "Checking database..."
             : `Database status: ${dbStatus}`}
       </p>
+      <AppRoutes />
     </main>
   );
 }
