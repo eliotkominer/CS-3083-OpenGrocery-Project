@@ -1,0 +1,58 @@
+.product-price-comparison {
+  max-inline-size: 58rem;
+  margin: 2rem auto;
+  padding-inline: 1rem;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+
+.product-price-comparison h2 {
+  margin-block-start: 0.75rem;
+}
+
+.product-price-comparison dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0 0 1.25rem;
+}
+
+.product-price-comparison dt {
+  font-weight: 600;
+}
+
+.product-price-comparison dd {
+  margin: 0;
+}
+
+.price-table-scroll {
+  overflow-x: auto;
+}
+
+.price-table-scroll table {
+  border-collapse: collapse;
+  min-inline-size: 38rem;
+  inline-size: 100%;
+  text-align: start;
+}
+
+.price-table-scroll caption {
+  font-weight: 600;
+  text-align: start;
+}
+
+.price-table-scroll th,
+.price-table-scroll td {
+  padding: 0.5rem;
+  border-block-end: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.price-table-scroll strong {
+  display: block;
+  color: var(--text-h);
+}
+
+.price-table-scroll time {
+  white-space: nowrap;
+}

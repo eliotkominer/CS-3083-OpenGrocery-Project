@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import pool from "./db/pool.js";
+import productsRouter from "./routes/products.js";
 const app = express();
 const port = Number(process.env.PORT) || 3001;
 
@@ -17,6 +18,17 @@ app.get("/api/health/db", async (req, res) => {
     console.error("Database query failed:", error);
     res.status(503).json({ status: "unavailable" });
   }
+});
+
+app.use("/api/products", productsRouter);
+
+// Mount API routes above this error handler.
+app.use("/api", (error, req, res, next) => {
+  if (!res.headersSent && error instanceof URIError && error.status === 400) {
+    return res.status(400).json({ error: "Malformed request URL" });
+  }
+
+  next(error);
 });
 
 app.listen(port, () => {
